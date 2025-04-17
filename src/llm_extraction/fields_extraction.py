@@ -52,7 +52,7 @@ def fields_extraction_json(model, html_cv):
         "skills": ["Python", "JavaScript", "SQL", "Machine Learning"]
     }
 
-    # Defining the prompt template - slightly adjusted for potentially better Deepseek parsing
+    # Defining the prompt template
     prompt_template = ChatPromptTemplate.from_template("""
     You are an expert information extraction assistant.
     Given the following HTML-formatted resume, carefully extract the following fields and output them as a valid JSON object:

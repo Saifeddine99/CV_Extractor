@@ -1,5 +1,4 @@
 import fitz
-import os
 
 def extract_text_from_image_pdf_html(pdf_path, language='eng'):
     """
@@ -31,18 +30,3 @@ def extract_text_from_image_pdf_html(pdf_path, language='eng'):
     except Exception as e:
         print(f"Error processing PDF for OCR: {e}")
         return ""
-
-if __name__ == '__main__':
-    # Example usage: Replace 'scanned_cv.pdf' with the actual path to your scanned PDF
-    scanned_pdf_file = 'scanned_cv.pdf'
-    extracted_html_ocr = extract_text_from_image_pdf_html(scanned_pdf_file)
-
-    if extracted_html_ocr:
-        print("Extracted HTML content (via OCR):")
-        print(extracted_html_ocr)
-
-        with open('extracted_scanned_cv.html', 'w', encoding='utf-8') as f:
-            f.write(extracted_html_ocr)
-        print("\nExtracted OCR content saved to extracted_scanned_cv.html")
-    else:
-        print("No text extracted via OCR or an error occurred.")

@@ -120,10 +120,6 @@ if pdf_path:
         st.subheader("Evaluation:")
         st.write(evaluate_extraction(json_ground_truth, extracted_fields))
 
-    # If testing on labeled data, also trigger the evaluation
-    if test_on_labeled:
-        pass
-
 elif not test_on_labeled:
     st.info("Please upload a CV PDF or choose to test on labeled PDFs in the sidebar.")
 

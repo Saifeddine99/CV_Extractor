@@ -79,5 +79,3 @@ for pdf_file in selected_pdfs:
 
     else:
         print(f"⚠️ Ground truth file not found for: {pdf_filename}")
-
-# You can now use `ground_truths` in the next step
