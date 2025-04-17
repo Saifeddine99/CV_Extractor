@@ -100,7 +100,7 @@ if pdf_path:
         st.write(extracted_fields)
         st.markdown("""___""")
         st.subheader("Evaluation:")
-        st.write(evaluate_extraction(extracted_fields, json_ground_truth))
+        st.write(evaluate_extraction(json_ground_truth, extracted_fields))
 
 
     with col2:
@@ -109,7 +109,7 @@ if pdf_path:
         st.write(extracted_fields)
         st.markdown("""___""")
         st.subheader("Evaluation:")
-        st.write(evaluate_extraction(extracted_fields, json_ground_truth))
+        st.write(evaluate_extraction(json_ground_truth, extracted_fields))
 
 
     with col3:
@@ -118,7 +118,7 @@ if pdf_path:
         st.write(extracted_fields)
         st.markdown("""___""")
         st.subheader("Evaluation:")
-        st.write(evaluate_extraction(extracted_fields, json_ground_truth))
+        st.write(evaluate_extraction(json_ground_truth, extracted_fields))
 
     # If testing on labeled data, also trigger the evaluation
     if test_on_labeled:
