@@ -1,0 +1,64 @@
+{
+  "name": "Byungjin Park",
+  "email": "posquit0.bj@gmail.com",
+  "phone": "(+82) 10-9030-1843",
+  "education": [
+    {
+      "degree": "B.S.",
+      "field": "COMPUTER SCIENCE AND ENGINEERING",
+      "institution": "POSTECH(Pohang University of Science and Technology)",
+      "year": "2010-2017"
+    }
+  ],
+  "experience": [
+    {
+      "title": "DEVOPS ENGINEER",
+      "company": "Dunamu Inc.",
+      "duration": "Sep. 2023-Present",
+      "description": null
+    },
+    {
+      "title": "FOUNDING MEMBER & SITE RELIABILITY ENGINEER & INFRASTRUCTURE TEAM LEAD",
+      "company": "Danggeun Pay Inc. (KarrotPay)",
+      "duration": "Mar 2021-Jun 2023",
+      "description": "Designed and provisioned the entire infrastructure on the AWS cloud to meet security compliance and acquire a business license for financial services in Korea. • Continuously improved the infrastructure architecture since launching the service. (currently 3.6 million users) Established a standardized base for declarative management of infrastructures and service deployments, enabling operational efficiency and consistency. Over 90% of AWS resources were all managed through standardized terraform modules. All add-ons and service workloads on the Kubernetes cluster were managed on a GitOps basis with Kustomize and ArgoCD. Saved over 30% of the overall AWS costs by establishing a quarterly purchasing strategiy for RI (Reserved Instance) and SP (Savings Plan) and by introducing Graviton instances. Established a core architecture for regulating of outbound DNS traffic in multi-account and multi-VPC environments utilizing AWS Route53 DNS Firewall and FMS. This significantly increased the level of security confidence in the financial sector's segregated environment. Introduced Okta employee identity solution in the company, establishing security policies and configuring SSO integration with over 20 enterprise systems including AWS, GitHub, Slack, Google Workspace. Set up a Hub and Spoke architecture, enabling a collaborative account structure with the parent company, Daangn Market."
+    },
+    {
+      "title": "SITE RELIABILITY ENGINEER",
+      "company": "Daangn Market Inc.",
+      "duration": "Feb, 2021-Mar 2021",
+      "description": null
+    },
+    {
+      "title": "FOUNDING MEMBER & DIRECTOR OF INFRASTRUCTURE DIVISION",
+      "company": "Kasa",
+      "duration": "Jun, 2018-Jan, 2021",
+      "description": "• Designed on-boarding process to guide new engineers, help them to focus on the right tasks, and set expectations to help them be successful at Infrastructure team. Migrated the orchestration system from DC/OS to Kubernetes which is based on AWS EKS, Managed 3 Kubernetes clusters and 300+ pods. Managed all Kubernetes manifests declaratively with Kustomize and ArgoCD. Designed and managed complex network configurations on AWS with 4 VPC and 100+ subnets. Separated the development network and oper- ation network according to financial regulations. Established dedicated network connections from AWS VPC to partners' on-premise network based on AWS Direct Connect with secure connection using IPsec VPN. Provisioned OpenVPN servers with LDAP integration. • Provisioned a observability system with Kafka, Elastic Stack(Filebeat, Heartbeat, APM Server, Logstash, Elasticsearch, Kibana). Collected log, uptime, tracing data from hosts, containers, pods and more. The ES cluster which has 9 nodes processed more than 1 billion documents per month. Wrote Terraform module to easily provision ES cluster on AWS EC2 instances. Provisioned a monitoring system with Kafka, Telegraf, InfluxDB, Grafana. Collected metrics from hosts, containers, pods and more. Wrote Terraform module to easily provision InfluxDB with HA on AWS EC2 instances. Introduced Kong API Gateway to easily connect all API microservices with a declarative management method based on Terraform and Atlantis to collaborate and audit change history. Provisioned the Directory Service for employee identity management based on OpenLDAP which guarantees HA with multi-master replication. • Implemented Worker microservices consuming Kafka event topics for email, SMS, Kakaotalk and Slack notification. Developed in-house frame- work to easily build Kafka consumer microservice with common features including retry on failure, DLQ(Dead Letter Queue), event routing and more. Introduced Elastic APM to help distributed tracing, trouble-shooting and performance testing in MSA."
+    },
+    {
+      "title": "SOFTWARE ARCHITECT",
+      "company": "Omnious. Co., Ltd.",
+      "duration": "Jun. 2017-May 2018",
+      "description": "Provisioned an easily managable hybrid infrastructure(Amazon AWS + On-premise) utilizing laC(Infrastructure as Code) tools like Ansible, Packer and Terraform. Built fully automated CI/CD pipelines on CircleCl for containerized applications using Docker, AWS ECR and Rancher. Designed an overall service architecture and pipelines of the Machine Learning based Fashion Tagging API SaaS product with the micro-services architecture. Implemented several API microservices in Node.js Koa and in the serverless AWS Lambda functions. Deployed a centralized logging environment(ELK, Filebeat, CloudWatch, S3) which gather log data from docker containers and AWS resources. Deployed a centralized monitoring environment(Grafana, InfluxDB, CollectD) which gather system metrics as well as docker run-time metrics."
+    },
+    {
+      "title": "CO-FOUNDER & SOFTWARE ENGINEER",
+      "company": "PLAT Corp.",
+      "duration": "Jan 2016-Jun. 2017",
+      "description": "Implemented RESTful API server for car rental booking application(CARPLAT in Google Play). Built and deployed overall service infrastructure utilizing Docker container, CircleCI, and several AWS stack(Including EC2, ECS, Route 53, 53, CloudFront, RDS, ElastiCache, IAM), focusing on high-availability, fault tolerance, and auto-scaling Developed an easy-to-use Payment module which connects to major PG(Payment Gateway) companies in Korea."
+    },
+    {
+      "title": "SOFTWARE ENGINEER & SECURITY RESEARCHER (COMPULSORY MILITARY SERVICE)",
+      "company": "R.O.K Cyber Command, MND",
+      "duration": "Aug. 2014-Apr 2016",
+      "description": "Lead engineer on agent-less backtracking system that can discover client device's fingerprint(including public and private IP) independently of the Proxy, VPN and NAT."
+    },
+    {
+      "title": "SOFTWARE ENGINEER",
+      "company": "ShitOne Corp.",
+      "duration": "Dec. 2011-Feb. 2012.",
+      "description": "Developed a proxy drive smartphone application which connects proxy driver and customer. Implemented overall Android application logic and wrote API server for community service, along with lead engineer who designed bidding protocol on raw socket and implemented API server for bidding"
+    }
+  ],
+  "skills": []
+}

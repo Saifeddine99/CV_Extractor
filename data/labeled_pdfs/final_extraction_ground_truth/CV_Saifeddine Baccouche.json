@@ -1,0 +1,69 @@
+{
+  "name": "Saifeddine Baccouche",
+  "email": "saif.bac1999@gmail.com",
+  "phone": "55303276",
+  "education": [
+    {
+      "degree": "Engineering cycle",
+      "field": "Automation and Industrial Computing",
+      "institution": "National Institute of Applied Science and Technology, Tunis",
+      "year": "2020 Present"
+    },
+    {
+      "degree": "Preparatory cycle",
+      "field": null,
+      "institution": "National Institute of Applied Science and Technology, Tunis",
+      "year": "2018 - 2020"
+    },
+    {
+      "degree": "Baccalaureat diploma",
+      "field": "technical sciences",
+      "institution": "pilot high school, Sousse",
+      "year": "2017 - 2018"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Summer internship",
+      "company": "Revampr, Tunis",
+      "duration": "Jul 2022 Present",
+      "description": "\"Zinki\" is an $Al/ML$ application which enables publishers, academics, governments, intellectuals and others to convert their scanned documents either manuscript or typescript into machine-readable text. [cite: 5, 6] Tasks: Development of a Deep Learning CNN based model to adjust rotated scanned documents using Keras as a framework and training the models using GPUs. [cite: 6] Creation of a dataset by manually labeling 1248 images. [cite: 7] Creation of a web application using Streamlit to allow other users to label images by selecting the right deviation angle of scanned documents. [cite: 7]"
+    },
+    {
+      "title": "End of year project",
+      "company": "INSAT, Tunis",
+      "duration": "Feb 2022 Jun 2022",
+      "description": "We realised a \"SMART HOUSE\" using Arduino and developed a mobile app using MIT App Inventor to commande the microcontroller from distance. [cite: 8, 9]"
+    },
+    {
+      "title": "Active member",
+      "company": "Aerobotix Club, Tunis",
+      "duration": "Jan 2019 May 2021",
+      "description": "Participation in 8 robotics competitions (one time: 1st Prize +one time: 3rd Prize)"
+    }
+  ],
+  "skills": [
+    "Python",
+    "c",
+    "java",
+    "c++",
+    "Numpy",
+    "Pandas",
+    "MySQL",
+    "PILLOW",
+    "OpenCV",
+    "Matplotlib",
+    "Seaborn",
+    "TABLEAU Software",
+    "Scikit Learn",
+    "Supervised Learning technologies",
+    "Unsupervised Learning technologies",
+    "Deep Learning: TensorFlow, Keras (Convolutional Neural Networks)",
+    "STM32",
+    "Arduino",
+    "SolidWorks",
+    "Catia",
+    "LabVIEW",
+    "Git"
+  ]
+}

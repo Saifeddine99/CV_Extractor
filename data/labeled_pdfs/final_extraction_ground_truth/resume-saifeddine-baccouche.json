@@ -1,0 +1,56 @@
+{
+  "name": "Saifeddine Baccouche",
+  "email": "saif.bac1999@gmail.com",
+  "phone": "+21655303276",
+  "education": [
+    {
+      "degree": "Computer Science Engineering Student",
+      "field": null,
+      "institution": "National Institute of Applied Science and Technology",
+      "year": "2018 - 2023"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Research And Development Engineer",
+      "company": "TopHealthTech (Top Doctors)",
+      "duration": "September 2023 - January 2025",
+      "description": "Engineered the backend for Doctor and Patient healthcare platforms (web/mobile) using Flask and GCP, implementing Redis caching and pagination for enhanced performance and scalability. Collaborated in building an Al document processing system with Google Gemini and LangChain, standardizing healthcare data. Developed a conversational chatbot using Flask (utilized OpenAl's GPT-4 Turbo model)."
+    },
+    {
+      "title": "Research And Development Intern",
+      "company": "TopHealthTech (Top Doctors)",
+      "duration": "March 2023 - August 2023",
+      "description": "Developed 2 Flask-based backend portals (Doctor and Patient Portals) helping doctors recommend treatment for patients suffering from diabetes type-2. Stored patients consent decisions on blockchain. Designed a consent-aware search engine to display only authorized patient data. All the data is stored in MongoDB."
+    },
+    {
+      "title": "Machine Learning Intern",
+      "company": "Zinki Al",
+      "duration": "July 2022 - November 2022",
+      "description": "Developed a Deep Learning CNN based model to adjust rotated scanned documents using Keras. Developed a web app using Streamlit to easily label the right deviation angle of scanned documents (manually labeling 1248 images)."
+    }
+  ],
+  "skills": [
+    "Python",
+    "HTML/CSS/JAVASCRIPT",
+    "SQL",
+    "Google Cloud Platform",
+    "MongoDB",
+    "Redis",
+    "SQLite",
+    "MySQL",
+    "Blockchain",
+    "Large Language Models",
+    "Keras",
+    "Tensorflow",
+    "Scikit-learn",
+    "Pandas",
+    "NumPy",
+    "Matplotlib",
+    "Seaborn",
+    "Git",
+    "GitHub",
+    "Bitbucket",
+    "Documentation"
+  ]
+}

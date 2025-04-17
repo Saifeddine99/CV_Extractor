@@ -1,0 +1,28 @@
+{
+  "name": "Laura Garcia",
+  "email": "laura.garcia@example.eu",
+  "phone": "+34 612 345 678",
+  "education": [
+    {
+      "degree": "MBA",
+      "field": "Human Resources",
+      "institution": "University of Barcelona",
+      "year": "2015"
+    }
+  ],
+  "experience": [
+    {
+      "title": "HR Generalist",
+      "company": "HumanEdge, Madrid",
+      "duration": "January 2019 – Present",
+      "description": "Managed recruitment processes and employee relations across departments. Conducted internal HR audits and policy updates."
+    },
+    {
+      "title": "HR Assistant",
+      "company": "PeopleFirst, Barcelona",
+      "duration": "March 2016 – December 2018",
+      "description": "Coordinated employee training programs and onboarding. Maintained HRIS databases and compliance records."
+    }
+  ],
+  "skills": ["Spanish (Native)", "English (Fluent)", "Italian (Basic)"]
+}

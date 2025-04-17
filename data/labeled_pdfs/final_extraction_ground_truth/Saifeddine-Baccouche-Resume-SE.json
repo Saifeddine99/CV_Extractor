@@ -1,0 +1,40 @@
+{
+  "name": "Saifeddine Baccouche",
+  "email": "saif.bac1999@gmail.com",
+  "phone": null,
+  "education": [
+    {
+      "degree": "Computer Science Engineering Student",
+      "field": null,
+      "institution": "National Institute of Applied Science and Technology",
+      "year": "2018 - 2023"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Research And Development Engineer",
+      "company": "TopHealthTech (Top Doctors)",
+      "duration": "March 2023 - present",
+      "description": "Developed the backend of 2 healthcare platforms: Doctor Portal (web app) and Patient Portal (mobile app) using Flask (Data stored on Google Cloud Platform with FHIR-compliant structures.) [cite: 3] Collaborated in the development of a system to extract and convert healthcare documents into FHIR bundles using Google Gemini, then enriching FHIR resources with SNOMED codes Developed 2 Flask-based backend portals (Doctor and Patient Portals) helping doctors recommend treatment for patients suffering from diabetes type-2. [cite: 3] Stored patients consent decisions on blockchain. [cite: 4] Designed a consent-aware search engine to display only authorized patient data. [cite: 4] Stored data in MongoDB (encrypted and in OpenEHR format). [cite: 5] Developed the backend of a conversational chatbot utilizing OpenAl's GPT-4 Turbo model. [cite: 5]"
+    },
+    {
+      "title": "Machine Learning Intern",
+      "company": "Zinki Al",
+      "duration": "July 2022 - November 2022",
+      "description": "Developed a Deep Learning CNN based model to adjust rotated scanned documents using Keras. [cite: 6] Developed a web app using Streamlit to easily label the right deviation angle of scanned documents (manually labeling 1248 images). [cite: 7]"
+    }
+  ],
+  "skills": [
+    "Cloud Platforms",
+    "SQL/NoSQL Databases",
+    "APIs and Integrations",
+    "Tensorflow",
+    "Large Language Models",
+    "Blockchain",
+    "Linux/ Windows",
+    "Nvidia Cuda",
+    "Healthcare data standards and formats",
+    "Version Control Systems Git/GitHub/Bitbucket",
+    "Documentation Confluence/Postman"
+  ]
+}

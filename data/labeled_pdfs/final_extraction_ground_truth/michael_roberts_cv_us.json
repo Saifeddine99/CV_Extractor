@@ -1,0 +1,28 @@
+{
+  "name": "Michael Roberts",
+  "email": "michael.roberts@example.com",
+  "phone": "(555) 123-4567",
+  "education": [
+    {
+      "degree": "B.Sc.",
+      "field": "Software Engineering",
+      "institution": "University of Washington",
+      "year": "2018"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Lead Developer",
+      "company": "CloudNova",
+      "duration": "Feb 2021 – Present",
+      "description": "Architected a microservices-based platform using Kubernetes and Docker. Mentored junior developers and led code review sessions."
+    },
+    {
+      "title": "Software Engineer",
+      "company": "AppVantage",
+      "duration": "May 2018 – Jan 2021",
+      "description": "Built backend services in Python and Go for high-performance applications. Collaborated with product managers to deliver features on time."
+    }
+  ],
+  "skills": ["Python", "Go", "JavaScript", "Docker", "Kubernetes", "AWS", "GCP"]
+}

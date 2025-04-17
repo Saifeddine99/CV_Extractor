@@ -1,0 +1,39 @@
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "phone": "(123) 456-7890",
+  "education": [
+    {
+      "degree": "B.Sc.",
+      "field": "Computer Science",
+      "institution": "University of California, Berkeley",
+      "year": "2017"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Senior Software Engineer",
+      "company": "TechCorp Inc.",
+      "duration": "Jan 2020 – Present",
+      "description": "Led a team of 4 developers to build a real-time analytics dashboard using React and Node.js. Improved application performance by 30% through optimized backend logic."
+    },
+    {
+      "title": "Software Developer",
+      "company": "WebSolutions LLC",
+      "duration": "Jun 2017 – Dec 2019",
+      "description": "Developed and maintained client websites and APIs using Django and PostgreSQL. Collaborated with UI/UX designers to enhance user experience and accessibility."
+    }
+  ],
+  "skills": [
+    "Python",
+    "JavaScript",
+    "React",
+    "Node.js",
+    "SQL",
+    "NoSQL",
+    "REST APIs",
+    "Docker",
+    "Kubernetes",
+    "AWS"
+  ]
+}

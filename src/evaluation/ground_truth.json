@@ -1,0 +1,22 @@
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "phone": "+1 (555) 123-4567",
+  "education": [
+    {
+      "degree": "Bachelor of Science",
+      "field": "Computer Science",
+      "institution": "University of Example",
+      "year": "2020"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Software Engineer",
+      "company": "Tech Corp",
+      "duration": "2020-2023",
+      "description": "Developed and maintained web applications"
+    }
+  ],
+  "skills": ["Python", "JavaScript", "SQL", "Machine Learning"]
+}

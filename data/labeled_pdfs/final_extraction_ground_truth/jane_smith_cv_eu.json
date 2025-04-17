@@ -1,0 +1,41 @@
+{
+  "name": "Jane Smith",
+  "email": "jane.smith@example.eu",
+  "phone": "+44 1234 567890",
+  "education": [
+    {
+      "degree": "Master’s Degree",
+      "field": "Information Systems",
+      "institution": "University of Lyon",
+      "year": "2014"
+    }
+  ],
+  "experience": [
+    {
+      "title": "IT Project Manager",
+      "company": "SoftSolutions, Paris",
+      "duration": "April 2018 – Present",
+      "description": "Managed software development projects using Agile methodologies with international teams. Ensured timely delivery, scope control, and quality assurance."
+    },
+    {
+      "title": "Business Analyst",
+      "company": "InfoTech Group, Lyon",
+      "duration": "July 2014 – March 2018",
+      "description": "Gathered and documented requirements for enterprise applications. Worked closely with developers and stakeholders to deliver effective solutions."
+    }
+  ],
+  "skills": [
+    "French (Native)",
+    "English (Fluent)",
+    "German (Intermediate)",
+    "Communication",
+    "Leadership",
+    "Risk Management",
+    "MS Project",
+    "Jira",
+    "Confluence",
+    "Trello",
+    "Microsoft Office Suite",
+    "SQL"
+  ]
+}

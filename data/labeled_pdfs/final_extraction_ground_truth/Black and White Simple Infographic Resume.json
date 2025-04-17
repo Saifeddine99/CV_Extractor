@@ -1,0 +1,44 @@
+{
+  "name": "DANIEL GALLEGO",
+  "email": "hello@reallygreatsite.com",
+  "phone": "",
+  "education": [
+    {
+      "degree": "UX Industrial Basics and General Application",
+      "field": "Automotive Technology",
+      "institution": "University of Engineering UX Cohort",
+      "year": "2016-2019"
+    },
+    {
+      "degree": "Bachelor of Design",
+      "field": "Process Engineering",
+      "institution": "Engineering University",
+      "year": "2014 - 2016"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Instant Chartz App, Morcelle Program",
+      "company": "",
+      "duration": "Jan 2023- Present",
+      "description": "Led development of an advanced automation system, achieving a 15% increase in operational efficiency. [cite: 4, 5] Streamlined manufacturing processes, reducing production costs by 10%. [cite: 5] Implemented preventive maintenance strategies, resulting in a 20% decrease in equipment downtime."
+    },
+    {
+      "title": "System UX Engineer",
+      "company": "XarrowAl Industries",
+      "duration": "Feb 2021-Dec 2022",
+      "description": "Designed and optimised a robotic control system, realizing a 12% performance improvement. [cite: 6, 7, 8] • Coordinated testing and validation, ensuring compliance with industry standards. [cite: 7] Provided technical expertise, contributing to a 15% reduction in system failures."
+    }
+  ],
+  "skills": [
+    "Prototyping Tools",
+    "User Research",
+    "Information Architecture",
+    "Interaction Design",
+    "Visual Design",
+    "Usability Heuristics",
+    "Accessibility",
+    "Responsive Design",
+    "User Testing Tools"
+  ]
+}
