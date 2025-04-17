@@ -29,21 +29,80 @@ A comprehensive tool for extracting information from CVs using various LLM model
 
 ## Installation
 
-1. Clone the repository
-2. Install dependencies:
+### 1. System Requirements
+
+- Python 3.8 or higher
+- Windows/Linux/macOS
+- At least 8GB RAM (16GB recommended for running larger models)
+- NVIDIA GPU with CUDA support (recommended for better performance)
+
+### 2. Install Python Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
+### 3. Install Ollama
+
+#### Windows
+
+1. Download the latest Ollama installer from [Ollama's official website](https://ollama.ai/download)
+2. Run the installer and follow the on-screen instructions
+3. Add Ollama to your system PATH if not done automatically
+
+#### Linux
+
+```bash
+curl -fsSL https://ollama.ai/install.sh | sh
+```
+
+#### macOS
+
+```bash
+brew install ollama
+```
+
+### 4. Download Required Models
+
+After installing Ollama, download the required models:
+
+```bash
+# Download Llama3
+ollama pull llama3
+
+# Download Mistral
+ollama pull mistral
+
+# Download Phi
+ollama pull phi
+```
+
+### 5. Verify Installation
+
+To verify that Ollama is working correctly:
+
+```bash
+ollama list
+```
+
+You should see the downloaded models listed.
+
 ## Usage
 
-Run the Streamlit app:
+1. Start the Ollama service:
+
+```bash
+ollama serve
+```
+
+2. In a new terminal, run the Streamlit app:
 
 ```bash
 streamlit run src/app.py
 ```
 
-## License
+## Troubleshooting
 
-MIT License
+- If you encounter memory issues, try using smaller models or reduce the context window size
+- For GPU acceleration issues, ensure CUDA is properly installed and configured
+- If Ollama service fails to start, check if the port 11434 is available
