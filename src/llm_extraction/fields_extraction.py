@@ -25,7 +25,7 @@ def extract_json_from_response(text: str):
 
 
 
-@st.cache_data(ttl=7200, show_spinner='Fields Extraction.....')
+@st.cache_data(ttl=36000, show_spinner='Fields Extraction.....')
 def fields_extraction_json(model, html_cv):
 
     # Example structured output format (for guidance in the prompt)

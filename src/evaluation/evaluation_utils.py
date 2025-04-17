@@ -1,55 +1,69 @@
-from sklearn.metrics import precision_score, recall_score, f1_score
-from difflib import SequenceMatcher
-import json
-
 def normalize_string(s):
     return s.lower().strip() if s else ""
 
-def compare_strings(pred, true):
-    return normalize_string(pred) == normalize_string(true)
+def compare_simple_field(gt, pred):
+    gt_norm = normalize_string(gt)
+    pred_norm = normalize_string(pred)
+    return int(gt_norm == pred_norm), int(gt_norm != pred_norm), int(pred_norm != gt_norm)
 
-def compare_lists(pred_list, true_list):
-    pred_set = set(map(normalize_string, pred_list))
-    true_set = set(map(normalize_string, true_list))
-    tp = len(pred_set & true_set)
-    precision = tp / len(pred_set) if pred_set else 0
-    recall = tp / len(true_set) if true_set else 0
-    f1 = 2 * precision * recall / (precision + recall) if precision + recall else 0
-    return precision, recall, f1
+def compare_list_of_strings(gt_list, pred_list):
+    gt_set = set(normalize_string(item) for item in gt_list)
+    pred_set = set(normalize_string(item) for item in pred_list)
+    tp = len(gt_set & pred_set)
+    fn = len(gt_set - pred_set)
+    fp = len(pred_set - gt_set)
+    return tp, fn, fp
 
-def compare_dict_lists(pred_list, true_list, keys):
-    matched_pred = set()
-    matched_true = set()
-    
-    for i, true_item in enumerate(true_list):
-        for j, pred_item in enumerate(pred_list):
-            if j in matched_pred:
+def compare_list_of_objects(gt_list, pred_list):
+    matched_pred_indices = set()
+    tp = 0
+    for gt_obj in gt_list:
+        match_found = False
+        for idx, pred_obj in enumerate(pred_list):
+            if idx in matched_pred_indices:
                 continue
-            match = all(compare_strings(pred_item.get(k, ""), true_item.get(k, "")) for k in keys)
-            if match:
-                matched_true.add(i)
-                matched_pred.add(j)
+            if all(normalize_string(gt_obj.get(k, '')) == normalize_string(pred_obj.get(k, '')) for k in gt_obj):
+                match_found = True
+                matched_pred_indices.add(idx)
                 break
+        if match_found:
+            tp += 1
+    fn = len(gt_list) - tp
+    fp = len(pred_list) - tp
+    return tp, fn, fp
 
-    tp = len(matched_true)
-    precision = tp / len(pred_list) if pred_list else 0
-    recall = tp / len(true_list) if true_list else 0
-    f1 = 2 * precision * recall / (precision + recall) if precision + recall else 0
-    return precision, recall, f1
+def evaluate_extraction(gt, pred):
+    total_tp = total_fn = total_fp = 0
 
-def evaluate(pred, true):
-    results = {}
-    results["name"] = compare_strings(pred["name"], true["name"])
-    results["email"] = compare_strings(pred["email"], true["email"])
-    results["phone"] = compare_strings(pred["phone"], true["phone"])
-    
-    skills_p, skills_r, skills_f1 = compare_lists(pred["skills"], true["skills"])
-    results["skills"] = {"precision": skills_p, "recall": skills_r, "f1": skills_f1}
+    # Simple fields
+    for field in ["name", "email", "phone"]:
+        tp, fn, fp = compare_simple_field(gt[field], pred[field])
+        total_tp += tp
+        total_fn += fn
+        total_fp += fp
 
-    edu_p, edu_r, edu_f1 = compare_dict_lists(pred["education"], true["education"], keys=["degree", "field", "institution", "year"])
-    results["education"] = {"precision": edu_p, "recall": edu_r, "f1": edu_f1}
+    # List of strings
+    tp, fn, fp = compare_list_of_strings(gt["skills"], pred["skills"])
+    total_tp += tp
+    total_fn += fn
+    total_fp += fp
 
-    exp_p, exp_r, exp_f1 = compare_dict_lists(pred["experience"], true["experience"], keys=["title", "company", "duration"])
-    results["experience"] = {"precision": exp_p, "recall": exp_r, "f1": exp_f1}
+    # List of objects
+    for field in ["education", "experience"]:
+        tp, fn, fp = compare_list_of_objects(gt[field], pred[field])
+        total_tp += tp
+        total_fn += fn
+        total_fp += fp
 
-    return results
+    precision = total_tp / (total_tp + total_fp) if (total_tp + total_fp) > 0 else 0
+    recall = total_tp / (total_tp + total_fn) if (total_tp + total_fn) > 0 else 0
+    f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0
+
+    return {
+        "true_positives": total_tp,
+        "false_negatives": total_fn,
+        "false_positives": total_fp,
+        "precision": round(precision, 4),
+        "recall": round(recall, 4),
+        "f1_score": round(f1, 4)
+    }

@@ -13,7 +13,7 @@ api_key = os.getenv("OPENAI_API_KEY")
 client = OpenAI(api_key=api_key)
 
 
-@st.cache_data(ttl=7200, show_spinner='PDF convertion to HTML.....')
+@st.cache_data(ttl=36000, show_spinner='PDF convertion to HTML.....')
 def extract_from_pdf_file(pdf_path, filename):
     with open(pdf_path, "rb") as f:
         data = f.read()

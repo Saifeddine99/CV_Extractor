@@ -1,11 +1,11 @@
 {
   "name": "Saifeddine Baccouche",
   "email": "saif.bac1999@gmail.com",
-  "phone": null,
+  "phone": "",
   "education": [
     {
       "degree": "Computer Science Engineering Student",
-      "field": null,
+      "field": "",
       "institution": "National Institute of Applied Science and Technology",
       "year": "2018 - 2023"
     }

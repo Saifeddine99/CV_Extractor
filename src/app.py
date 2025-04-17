@@ -13,6 +13,8 @@ from src.pdf_processing.direct_extraction_from_pdf import extract_from_pdf_file
 
 from src.llm_extraction.fields_extraction import fields_extraction_json
 
+from src.evaluation.evaluation_utils import evaluate_extraction
+
 # Set page configuration to wide layout
 st.set_page_config(layout="wide")
 
@@ -98,6 +100,7 @@ if pdf_path:
         st.write(extracted_fields)
         st.markdown("""___""")
         st.subheader("Evaluation:")
+        st.write(evaluate_extraction(extracted_fields, json_ground_truth))
 
 
     with col2:
@@ -106,6 +109,7 @@ if pdf_path:
         st.write(extracted_fields)
         st.markdown("""___""")
         st.subheader("Evaluation:")
+        st.write(evaluate_extraction(extracted_fields, json_ground_truth))
 
 
     with col3:
@@ -114,6 +118,7 @@ if pdf_path:
         st.write(extracted_fields)
         st.markdown("""___""")
         st.subheader("Evaluation:")
+        st.write(evaluate_extraction(extracted_fields, json_ground_truth))
 
     # If testing on labeled data, also trigger the evaluation
     if test_on_labeled:
