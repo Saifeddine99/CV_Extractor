@@ -2,6 +2,11 @@
 
 A comprehensive tool for extracting Name, Email, Phone, Education, Skills and Experience from CVs using various LLM models (Llama3, Mistral, Deepseek-R1) and PDF processing techniques.
 
+## Tutorial
+
+Watch our tutorial video to see how the interface works:
+[![CV Extractor Tutorial](https://img.youtube.com/vi/vIJnzV1sH7I/0.jpg)](https://www.youtube.com/watch?v=vIJnzV1sH7I)
+
 ## Project Structure
 
 ```
