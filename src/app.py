@@ -98,27 +98,30 @@ if pdf_path:
         st.subheader("Llama3")
         extracted_fields = fields_extraction_json("llama3", raw_text) # extract_fields
         st.write(extracted_fields)
-        st.markdown("""___""")
-        st.subheader("Evaluation:")
-        st.write(evaluate_extraction(json_ground_truth, extracted_fields))
+        if test_on_labeled:
+            st.markdown("""___""")
+            st.subheader("Evaluation:")
+            st.write(evaluate_extraction(json_ground_truth, extracted_fields))
 
 
     with col2:
         st.subheader("Mistral")
         extracted_fields = fields_extraction_json("mistral", raw_text) # extract_fields
         st.write(extracted_fields)
-        st.markdown("""___""")
-        st.subheader("Evaluation:")
-        st.write(evaluate_extraction(json_ground_truth, extracted_fields))
+        if test_on_labeled:
+            st.markdown("""___""")
+            st.subheader("Evaluation:")
+            st.write(evaluate_extraction(json_ground_truth, extracted_fields))
 
 
     with col3:
         st.subheader("Deepseek-r1")
         extracted_fields = fields_extraction_json("deepseek-r1", raw_text) # extract_fields
         st.write(extracted_fields)
-        st.markdown("""___""")
-        st.subheader("Evaluation:")
-        st.write(evaluate_extraction(json_ground_truth, extracted_fields))
+        if test_on_labeled:
+            st.markdown("""___""")
+            st.subheader("Evaluation:")
+            st.write(evaluate_extraction(json_ground_truth, extracted_fields))
 
 elif not test_on_labeled:
     st.info("Please upload a CV PDF or choose to test on labeled PDFs in the sidebar.")

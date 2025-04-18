@@ -1,22 +1,23 @@
 # CV Extractor
 
-A comprehensive tool for extracting information from CVs using various LLM models and PDF processing techniques.
+A comprehensive tool for extracting Name, Email, Phone, Education, Skills and Experience from CVs using various LLM models (Llama3, Mistral, Deepseek-R1) and PDF processing techniques.
 
 ## Project Structure
 
 ```
 ├── data/
-│   ├── labeled_pdfs/      # PDFs with known ground truth
-│   │   ├── text_based/    # Text-based PDFs
-│   │   └── image_based/   # Image-based PDFs
-│   └── unlabeled_pdfs/    # PDFs to be processed
+│ ├── labeled_pdfs/ # PDFs with known ground truth
+│ │ ├── text_based/ # Text-based PDFs
+│ │ └── image_based/ # Image-based PDFs
+│ └── unlabeled_pdfs/ # PDFs to be processed
 ├── src/
-│   ├── pdf_processing/    # PDF text and image extraction
-│   ├── llm_extraction/    # LLM-based information extraction
-│   ├── evaluation/        # Evaluation metrics and ground truth
-│   ├── utils/            # Utility functions
-│   └── app.py            # Streamlit application
-└── notebooks/            # Experimental notebooks
+│ ├── pdf_processing/ # PDF text and image extraction
+│ ├── llm_extraction/ # LLM-based information extraction
+│ ├── evaluation/ # Evaluation metrics and ground truth
+│ ├── utils/ # Utility functions
+│ └── app.py # Streamlit application
+├── requirements.txt # Python dependencies
+└── run.sh # Automated setup and launch script
 ```
 
 ## Features
@@ -27,22 +28,45 @@ A comprehensive tool for extracting information from CVs using various LLM model
 - Streamlit-based web interface
 - Evaluation framework
 
-## Installation
+## Installation & Usage
 
-### 1. System Requirements
+You have two options to set up and run the application:
+
+### Option 1: Automated Setup (Recommended)
+
+1. Make sure you have Python 3.8 or higher installed
+2. Install Ollama following the instructions in the "Install Ollama" section below
+3. Make the run script executable:
+   ```bash
+   chmod +x run.sh
+   ```
+4. Run the automated setup script:
+   ```bash
+   ./run.sh
+   ```
+   This script will:
+   - Create and activate a virtual environment
+   - Install all dependencies
+   - Start the Ollama service if not running
+   - Download required models if not present
+   - Launch the Streamlit application
+
+### Option 2: Manual Setup
+
+#### 1. System Requirements
 
 - Python 3.8 or higher
 - Windows/Linux/macOS
 - At least 8GB RAM (16GB recommended for running larger models)
-- NVIDIA GPU with CUDA support (recommended for better performance)
+- NVIDIA GPU with CUDA support (recommended but not mandatory)
 
-### 2. Install Python Dependencies
+#### 2. Install Python Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Install Ollama
+#### 3. Install Ollama
 
 #### Windows
 
@@ -62,7 +86,7 @@ curl -fsSL https://ollama.ai/install.sh | sh
 brew install ollama
 ```
 
-### 4. Download Required Models
+#### 4. Download Required Models
 
 After installing Ollama, download the required models:
 
@@ -77,7 +101,7 @@ ollama pull mistral
 ollama pull phi
 ```
 
-### 5. Verify Installation
+#### 5. Verify Installation
 
 To verify that Ollama is working correctly:
 
