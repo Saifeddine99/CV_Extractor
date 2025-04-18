@@ -31,7 +31,7 @@ html_folder_gt = "data/labeled_pdfs/pdf_to_html_ground_truth"
 pdf_names = get_pdf_names(pdf_folder)
 
 # Streamlit app
-st.title("Text-Based PDF Text Extraction in HTML format")
+st.title("Image-Based PDF Text Extraction in HTML format")
 st.write("###")
 
 # Select PDF

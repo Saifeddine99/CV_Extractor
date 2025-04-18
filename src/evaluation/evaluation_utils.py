@@ -1,5 +1,6 @@
 def normalize_string(s):
-    return s.lower().strip() if s else ""
+    if isinstance(s, str):
+        return s.lower().strip() if s else ""
 
 def compare_simple_field(gt, pred):
     gt_norm = normalize_string(gt)
