@@ -29,7 +29,7 @@ Watch our tutorial video to see how the interface works:
 
 - PDF text extraction
 - Image-based PDF processing
-- Multiple LLM model support (Llama3, Mistral, Phi)
+- Multiple LLM model support (Llama3, Mistral, Deepseek-R1)
 - Streamlit-based web interface
 - Evaluation framework
 
@@ -102,8 +102,8 @@ ollama pull llama3
 # Download Mistral
 ollama pull mistral
 
-# Download Phi
-ollama pull phi
+# Download Deepseek-R1
+ollama pull deepseek-r1
 ```
 
 #### 5. Verify Installation

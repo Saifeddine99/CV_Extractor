@@ -22,7 +22,7 @@ if ! curl -s http://localhost:11434/api/tags > /dev/null; then
 fi
 
 # Check if required models are installed
-required_models=("llama3" "mistral" "phi")
+required_models=("llama3" "mistral" "deepseek-r1")
 for model in "${required_models[@]}"; do
     if ! ollama list | grep -q "$model"; then
         echo "Downloading $model model..."
@@ -32,4 +32,5 @@ done
 
 # Start the Streamlit app
 echo "Starting the application..."
+export PYTHONPATH=$(pwd):$(pwd)/src
 streamlit run src/app.py 
